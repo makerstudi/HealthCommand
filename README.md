@@ -1,1 +1,1 @@
-# HealthCommand
+--이 스크립트는 오직 TW_ASVZ|SynapseX#0221 의 저작권을 가지고있는 소유자므로 퍼트리는건 자제해주십쇼

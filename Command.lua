@@ -16,13 +16,13 @@ local char = plr.Character
 local place = game.PlaceId
 local Logo = "rbxassetid://2093843497"
 local prefix = "/server:"
-local Health = 0
+local Health = 100
 
 plr.Chatted:Connect(function(msg)
-    if string.sub(msg, 1, 15) == prefix .. "health " then
-        Health = string.sub(msg, 16)
-        char.Humanoid.MaxHealth = Health
-        char.Humanoid.Health = Health
+    if string.sub(msg, 1, 11) == prefix .. "god" then
+        Health = math.huge
+        char.Humanoid.MaxHealth = math.huge
+        char.Humanoid.Health = math.huge
     elseif string.sub(msg, 1, 13) == prefix .. "reset" then
         char.Humanoid.MaxHealth = 100
         char.Humanoid.Health = 0
@@ -64,3 +64,7 @@ plr.Chatted:Connect(function(msg)
         })
     end
 end)
+while wait() do
+    char:WaitForChild("Humanoid").MaxHealth = Health
+    char:WaitForChild("Humanoid").Health = Health
+end

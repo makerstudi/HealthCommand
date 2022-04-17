@@ -37,7 +37,7 @@ plr.Chatted:Connect(function(msg)
             FontSize = Enum.FontSize.Size96
         })
     elseif string.sub(msg, 1, 14) == prefix .. "rejoin" then
-        wait(0.2)
+        wait(0.3)
         game.StarterGui:SetCore("ChatMakeSystemMessage",{
             Text = "[Server]: 3초뒤 Rejoin",
             Font = Enum.Font.SourceSansBold,
@@ -45,7 +45,7 @@ plr.Chatted:Connect(function(msg)
             FontSize = Enum.FontSize.Size96
         })
         wait(3)
-        game:GetService("TeleportService"):Teleport(game.PlaceId, player)
+        game:GetService("TeleportService"):Teleport(place)
         
     elseif string.sub(msg, 1, 11) == prefix .. "dev" then
         game.StarterGui:SetCore("SendNotification", {
